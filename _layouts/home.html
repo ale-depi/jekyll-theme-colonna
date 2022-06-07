@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="content">
+  <div class="recent-posts section">
+    <h2 class="section-header">
+      Recent posts
+    </h2>
+    <div class="posts">
+      {% for post in paginator.posts %}
+        <div class="post">
+          <div class="meta">
+            {{ post.date | date: "%Y/%m/%d" }}
+          </div>
+          <a class="title" href="{{ post.url }}">{{ post.title }}</a> &mdash;
+          <span>
+            {% if post.description %}
+	      {{ post.description }}
+            {% else %}
+              {{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}
+            {% endif %}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include paginator.html %}

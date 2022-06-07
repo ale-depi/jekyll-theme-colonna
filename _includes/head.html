@@ -1,0 +1,33 @@
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="{{ site.author }}">
+
+  {% if page.url == "/" %}
+  <title>{{ site.title }}{% if site.subtitle %} - {{ site.subtitle }}{% endif %}</title>
+  {% else %}
+  <title>{{ page.title }} - {{ site.title }}</title>
+  {% endif %}
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" type="text/css" />
+
+  {% unless site.disable_theme_switcher %}
+  <script type="text/javascript"
+          src="/assets/js/theme-switcher.js"
+          crossorigin="anonymous"></script>
+  {% endunless %}
+
+  <script type="text/javascript"
+          src="/assets/js/header.js"
+          crossorigin="anonymous"></script>
+
+</head>

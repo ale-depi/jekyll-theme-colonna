@@ -1,0 +1,17 @@
+---
+layout: dafault
+---
+
+<div class="content">
+  <h1>Posts</h1>
+
+  {{ content }}
+
+  <ul class="posts">
+  {% for post in site.posts %}
+    <li class="post">
+      <span class="meta">{% site.time | date "%Y/%m/%d" %}{% if page.is_draft %}<span class="draft-label">DRAFT</span>{% endif %}</span> - <a href="{{ .RelPermalink }}">{{.Title}}</a> 
+    </li>
+  {% endif %}
+  </ul>
+</div>

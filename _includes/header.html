@@ -1,0 +1,51 @@
+<header>
+  
+  <!-- title and theme switcher -->
+  <div class="site-title">
+    <h1 class="title-string">
+      <a href="/">
+        {{ site.title }}
+      </a>
+    </h1>
+    {% unless site.disable_theme_switcher %}
+      <a class="theme-switch" title="Switch Theme">
+        <i class="fas fa-adjust fa-lg" aria-hidden="true">
+        </i>
+      </a>
+    {% endunless %}
+  </div>
+
+  <!-- description -->
+  <div class="site-description">
+    {% if site.subtitle %}
+      <h2>{{ site.subtitle }}</h2>
+    {% endif %}
+  </div>
+
+  <!-- social links -->
+  <div class="social">
+    <ul class="flat">
+      {% for item in site.social_icons %}
+        <a href="{{ item.url }}" title="{{ item.title }}">
+          <i class="{{ item.icon }} fa-lg" aria-hidden="true">
+          </i>
+        </a>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- navigation bar -->
+  <nav class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+      {% for item in site.menu %}
+      <li><a {% if item.url == page.url %}class="current"{% else %}href="{{ item.url }}"{% endif %} title="{{ item.name }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+</header>
