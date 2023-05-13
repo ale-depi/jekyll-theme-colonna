@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: master
 
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - uses: actions/cache@v3
@@ -21,5 +23,6 @@ jobs:
 
       - uses: helaili/jekyll-action@2.5.0
         with:
+          target_path: /
+          target_branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: 'gh-pages'
