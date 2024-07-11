@@ -4,8 +4,8 @@ title: Colonna
 subtitle: Minimal theme
 
 # html specifications
-url: ""
-baseurl: ""
+url: "https://ale-depi.github.io"
+baseurl: "/jekyll-theme-colonna"
 lang: en
 
 # Theme switcher
