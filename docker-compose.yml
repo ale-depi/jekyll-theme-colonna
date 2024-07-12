@@ -1,0 +1,13 @@
+services:
+  jekyll-server:
+    build: .
+    image: "colonna:dev"
+    container_name: colonna-container
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/home/juser/jekyll-theme-colonna
+    working_dir: /home/juser/jekyll-theme-colonna
+    stdin_open: true
+    tty: true
+    command: "/bin/ash"

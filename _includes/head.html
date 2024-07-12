@@ -17,17 +17,17 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
   <link rel="shortcut icon" href="/assets/icons/favicon.ico">
 
-  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/css/all.min.css" type="text/css" />
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" type="text/css" />
+  <link rel="stylesheet" href="{{ "/assets/css/all.min.css" | relative_url }}" type="text/css" />
 
   {% unless site.disable_theme_switcher %}
   <script type="text/javascript"
-          src="/assets/js/theme-switcher.js"
+	  src="{{ "/assets/js/theme-switcher.js" | relative_url }}"
           crossorigin="anonymous"></script>
   {% endunless %}
 
   <script type="text/javascript"
-          src="/assets/js/header.js"
+	  src="{{ "/assets/js/header.js" | relative_url }}"
           crossorigin="anonymous"></script>
 
 </head>
