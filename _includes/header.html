@@ -43,7 +43,7 @@
     </a>
     <ul class="nav" id="navMenu">
       {% for item in site.menu %}
-      <li><a {% if item.url == page.url %}class="current"{% else %}href="{{ item.url }}"{% endif %} title="{{ item.name }}">{{ item.name }}</a></li>
+      <li><a {% if item.url == page.url %}class="current"{% else %}href="{{ item.url | relative_url }}"{% endif %} title="{{ item.name }}">{{ item.name }}</a></li>
       {% endfor %}
     </ul>
   </nav>

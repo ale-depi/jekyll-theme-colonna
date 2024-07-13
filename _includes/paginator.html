@@ -7,7 +7,7 @@
     </li>
     <li class="page-item page-next">
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="page-link" aria-label="Next"><span aria-hidden="true">Next page →</span></a>
+      <a href="{{ paginator.next_page_path | relative_url }}" class="page-link" aria-label="Next"><span aria-hidden="true">Next page →</span></a>
     {% endif %}
     </li>
   </ul>

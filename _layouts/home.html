@@ -13,7 +13,7 @@ layout: default
           <div class="meta">
             {{ post.date | date: "%Y/%m/%d" }}
           </div>
-          <a class="title" href="{{ post.url }}">{{ post.title }}</a> &mdash;
+          <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a> &mdash;
           <span>
             {% if post.description %}
 	      {{ post.description }}
